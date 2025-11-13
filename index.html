@@ -420,18 +420,85 @@
             font-size: 1.2em;
         }
 
-        /* Slide 8 - Closing */
+        /* Slide 8 - Future Development */
         .slide-8 {
+            background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+        }
+
+        .future-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .future-header h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .future-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .future-card {
+            background: rgba(255,255,255,0.15);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.3);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .future-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .future-icon {
+            font-size: 5em;
+            margin-bottom: 20px;
+        }
+
+        .future-card h3 {
+            font-size: 1.8em;
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+
+        .future-card p {
+            font-size: 1.2em;
+            line-height: 1.5;
+        }
+
+        .future-vision {
+            background: rgba(255,215,0,0.2);
+            padding: 30px;
+            border-radius: 20px;
+            margin-top: 40px;
+            border: 3px solid #ffd700;
+            text-align: center;
+        }
+
+        .future-vision p {
+            font-size: 1.4em;
+            line-height: 1.8;
+            font-style: italic;
+        }
+
+        /* Slide 9 - Closing */
+        .slide-9 {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             text-align: center;
         }
 
-        .slide-8 h1 {
+        .slide-9 h1 {
             font-size: 3.5em;
             margin-bottom: 40px;
         }
 
-        .slide-8 .tagline {
+        .slide-9 .tagline {
             font-size: 2em;
             font-style: italic;
             margin-top: 50px;
@@ -642,7 +709,7 @@
             </h2>
         </div>
 
-        <!-- Slide 7: Impact with Photo -->
+        <!-- Slide 7: Impact -->
         <div class="slide slide-7">
             <h1>🌟 Dampak & Keberlanjutan</h1>
             <div class="impact-grid">
@@ -658,7 +725,7 @@
                     
                     <h3 style="color: #ffd700; margin: 20px 0 10px 0;">👨‍🏫 Bagi Guru</h3>
                     <div class="impact-item">
-                        Tumbuh budaya berbagi dan belajar di komunitas guru digital.
+                        Tumbuh budaya berbagi dan belajar di komunitas guru digital
                     </div>
                     <div class="impact-item">
                         Peningkatan kompetensi digital guru
@@ -670,7 +737,7 @@
                         <img src="images/foto7.jpg" alt="Diseminasi">
                     </div>
                     <div class="impact-item">
-                        Pendampingan guru melalui aplikasi dan praktik langsung di sekolah.
+                        Pendampingan guru melalui aplikasi dan praktik langsung di sekolah
                     </div>
                     <div class="impact-item">
                         Model scalable untuk bahasa daerah lainnya
@@ -682,8 +749,38 @@
             </div>
         </div>
 
-        <!-- Slide 8: Closing -->
+        <!-- Slide 8: Future Development -->
         <div class="slide slide-8">
+            <div class="future-header">
+                <h1>🚀 Arah Pengembangan ke Depan</h1>
+                <p style="font-size: 1.5em; color: #ffd700;">Inovasi Berkelanjutan untuk Masa Depan</p>
+            </div>
+            
+            <div class="future-grid">
+                <div class="future-card">
+                    <div class="future-icon">🤖</div>
+                    <h3>Integrasi AI</h3>
+                    <p>Pembelajaran kosakata Sunda berbasis suara dan gambar dengan kecerdasan buatan</p>
+                </div>
+                <div class="future-card">
+                    <div class="future-icon">📊</div>
+                    <h3>Personalisasi Belajar</h3>
+                    <p>Sistem adaptif yang menyesuaikan dengan kemampuan dan kecepatan belajar siswa</p>
+                </div>
+                <div class="future-card">
+                    <div class="future-icon">🌏</div>
+                    <h3>Ekspansi Nasional</h3>
+                    <p>Replikasi untuk ratusan bahasa daerah di Indonesia</p>
+                </div>
+            </div>
+            
+            <div class="future-vision">
+                <p><strong>Visi:</strong> "Harapannya, inovasi ini dapat direplikasi untuk ratusan bahasa daerah lain di Indonesia agar semua anak bisa belajar teknologi sekaligus mencintai budayanya."</p>
+            </div>
+        </div>
+
+        <!-- Slide 9: Closing -->
+        <div class="slide slide-9">
             <h1>Terima Kasih</h1>
             <p style="font-size: 1.8em; margin: 40px 0;">
                 SUNDA CODE membuktikan bahwa teknologi dan budaya <span class="highlight">bukan musuh</span>, 
@@ -701,11 +798,11 @@
     </div>
 
     <!-- Navigation -->
-    <div class="slide-number">Slide <span id="current">1</span> / 8</div>
+    <div class="slide-number">Slide <span id="current">1</span> / 9</div>
 
     <script>
         let currentSlide = 1;
-        const totalSlides = 8;
+        const totalSlides = 9;
         let hideTimeout;
 
         function showSlide(n) {
@@ -742,7 +839,6 @@
             }, 3000);
         }
 
-        // Keyboard navigation
         document.addEventListener('keydown', (e) => {
             if (e.key === 'ArrowRight' || e.key === ' ') {
                 e.preventDefault();
@@ -761,10 +857,8 @@
             }
         });
 
-        // Show slide number on mouse move
         document.addEventListener('mousemove', showSlideNumber);
 
-        // Show first slide
         showSlide(1);
         showSlideNumber();
     </script>
