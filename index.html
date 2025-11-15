@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUNDA CODE Presentation</title>
+    <title>Persiapan Ekspose Praktik Baik - KKG Gugus 2 Cibatok</title>
     <style>
         * {
             margin: 0;
@@ -13,43 +13,40 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             overflow: hidden;
-            background: #000;
         }
 
-        .slide-container {
+        .presentation {
             width: 100vw;
             height: 100vh;
-            position: relative;
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
+            position: relative;
         }
 
         .slide {
             display: none;
-            width: 100%;
-            height: 100%;
-            padding-top: 60px;
-            padding-left: 60px;
-            padding-right: 60px;
-            padding-bottom: 120px;
-            color: white;
-            position: absolute;
+            width: 90%;
+            max-width: 1200px;
+            height: 85vh;
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
             animation: slideIn 0.5s ease-out;
             overflow-y: auto;
         }
 
         .slide.active {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            display: block;
         }
 
         @keyframes slideIn {
             from {
                 opacity: 0;
-                transform: translateX(50px);
+                transform: translateX(100px);
             }
             to {
                 opacity: 1;
@@ -57,810 +54,449 @@
             }
         }
 
-        /* Slide 1 - Opening */
-        .slide-1 {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .slide-1-content {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 60px;
-            max-width: 1200px;
-        }
-
-        .slide-1-left {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .slide-1-mascot {
-            width: 300px;
-            height: 300px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 30px;
-            border: 5px solid rgba(255,255,255,0.3);
-            overflow: hidden;
-        }
-
-        .slide-1-mascot img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .slide-1-logo {
-            text-align: center;
-        }
-
-        .slide-1-logo h1 {
-            font-size: 5em;
-            margin-bottom: 5px;
-            letter-spacing: 3px;
-        }
-
-        .slide-1-logo .code-text {
-            font-size: 3em;
-            font-style: italic;
-            font-weight: 300;
-            color: #ffd700;
-        }
-
-        .slide-1-right {
-            flex: 1;
-            background: rgba(255,255,255,0.15);
-            padding: 50px;
-            border-radius: 30px;
-            backdrop-filter: blur(10px);
-            border: 3px solid rgba(255,255,255,0.3);
-        }
-
-        .slide-1-right h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #ffd700;
-            line-height: 1.3;
-        }
-
-        .slide-1-right .subtitle-text {
-            font-size: 1.5em;
-            margin-bottom: 30px;
-            line-height: 1.5;
-        }
-
-        .slide-1-right .author {
-            margin-top: 30px;
-            padding-top: 30px;
-            border-top: 2px solid rgba(255,255,255,0.3);
-        }
-
-        .slide-1-right .author p {
-            font-size: 1.3em;
-            margin-bottom: 10px;
-        }
-
-        /* Slide 2 - Problem with Photos */
-        .slide-2 {
-            background: linear-gradient(135deg, #c31432 0%, #240b36 100%);
-            padding-top: 80px !important;
-        }
-
-        .slide-2 h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-
-        .problem-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin-top: 30px;
-        }
-
-        .photo-box {
-            background: rgba(255,255,255,0.15);
-            padding: 20px;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(255,255,255,0.3);
-            text-align: center;
-        }
-
-        .photo-placeholder {
-            width: 100%;
-            height: 280px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 15px;
-            border: 2px solid rgba(255,255,255,0.3);
-            overflow: hidden;
-            padding: 0;
-        }
-
-        .photo-placeholder img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-
-        .stat-box {
-            background: rgba(255,255,255,0.15);
-            padding: 25px;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(255,255,255,0.3);
-            margin-bottom: 15px;
-        }
-
-        .stat-number {
-            font-size: 3.5em;
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #ffd700;
-        }
-
-        /* Slide 3 - Solution */
-        .slide-3 {
-            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
-        }
-
-        .solution-points {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-            margin-top: 40px;
-        }
-
-        .point {
-            display: flex;
-            align-items: center;
-            background: rgba(255,255,255,0.2);
-            padding: 25px;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-        }
-
-        .point-number {
-            font-size: 3em;
-            font-weight: bold;
-            margin-right: 25px;
-            min-width: 70px;
-            color: #ffd700;
-        }
-
-        /* Slide 4 - Implementation with Photos */
-        .slide-4 {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-        }
-
-        .impl-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        .impl-card {
-            background: rgba(255,255,255,0.2);
-            padding: 20px;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-        }
-
-        .impl-card h3 {
-            font-size: 1.4em;
-            margin-bottom: 15px;
-            color: #ffd700;
-        }
-
-        .impl-photo {
-            width: 100%;
-            height: 180px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 15px 0;
-            border: 2px solid rgba(255,255,255,0.3);
-            overflow: hidden;
-            padding: 0;
-        }
-
-        .impl-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-
-        /* Slide 5 - Showcase with Photos */
-        .slide-5 {
-            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
-            padding-top: 80px !important;
-        }
-
-        .slide-5 h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-
-        .showcase-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin-top: 30px;
-        }
-
-        .showcase-box {
-            background: rgba(255,255,255,0.25);
-            padding: 25px;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-        }
-
-        .app-photo {
-            width: 100%;
-            height: 350px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 20px 0;
-            border: 2px solid rgba(255,255,255,0.3);
-            overflow: hidden;
-            padding: 0;
-        }
-
-        .app-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-
-        /* Slide 6 - Results */
-        .slide-6 {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-
-        .results-container {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 50px;
-        }
-
-        .result-item {
-            text-align: center;
-            background: rgba(255,255,255,0.25);
-            padding: 40px;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            min-width: 250px;
-        }
-
-        .result-arrow {
-            font-size: 3em;
-            margin: 20px 0;
-        }
-
-        .before {
-            font-size: 3em;
-            color: #ff4444;
-            font-weight: bold;
-        }
-
-        .after {
-            font-size: 3em;
-            color: #00ff88;
-            font-weight: bold;
-        }
-
-        /* Slide 7 - Impact with Photos */
-        .slide-7 {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-        }
-
-        .impact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin-top: 30px;
-        }
-
-        .impact-section {
-            background: rgba(255,255,255,0.2);
-            padding: 25px;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-        }
-
-        .impact-photo {
-            width: 100%;
-            height: 220px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 20px 0;
-            border: 2px solid rgba(255,255,255,0.3);
-            overflow: hidden;
-            padding: 0;
-        }
-
-        .impact-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-
-        .impact-item {
-            background: rgba(255,255,255,0.15);
-            padding: 15px 20px;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            border-left: 5px solid #ffd700;
-            font-size: 1.2em;
-        }
-
-        /* Slide 8 - Future Development */
-        .slide-8 {
-            background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
-        }
-
-        .future-header {
-            text-align: center;
-            margin-bottom: 0px;
-        }
-
-        .future-header h1 {
-            font-size: 3em;
-            margin-bottom: 1px;
-        }
-
-        .future-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .future-card {
-            background: rgba(255,255,255,0.15);
-            padding: 30px;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(255,255,255,0.3);
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .future-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .future-icon {
-            font-size: 5em;
-            margin-bottom: 20px;
-        }
-
-        .future-card h3 {
-            font-size: 1.8em;
-            color: #ffd700;
-            margin-bottom: 15px;
-        }
-
-        .future-card p {
-            font-size: 1.2em;
-            line-height: 1.5;
-        }
-
-        .future-vision {
-            background: rgba(255,215,0,0.2);
-            padding: 30px;
-            border-radius: 20px;
-            margin-top: 40px;
-            border: 3px solid #ffd700;
-            text-align: center;
-        }
-
-        .future-vision p {
-            font-size: 1.4em;
-            line-height: 1.8;
-            font-style: italic;
-        }
-
-        /* Slide 9 - Closing */
-        .slide-9 {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            text-align: center;
-        }
-
-        .slide-9 h1 {
-            font-size: 3.5em;
-            margin-bottom: 40px;
-        }
-
-        .slide-9 .tagline {
-            font-size: 2em;
-            font-style: italic;
-            margin-top: 50px;
-            color: #ffd700;
-        }
-
-        .slide-number {
-            position: fixed;
-            bottom: 30px;
-            left: 30px;
-            background: rgba(255,255,255,0.3);
-            padding: 15px 25px;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-            font-size: 1.2em;
-            z-index: 1000;
-            opacity: 1;
-            transition: opacity 0.3s ease;
-        }
-
-        .slide-number.hidden {
-            opacity: 0.3;
-        }
-
-        .slide-number:hover {
-            opacity: 1;
-        }
-
         h1 {
+            color: #667eea;
             font-size: 3em;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
+            text-align: center;
         }
 
         h2 {
-            font-size: 2em;
-            margin-bottom: 20px;
+            color: #764ba2;
+            font-size: 2.2em;
+            margin-bottom: 25px;
+            border-bottom: 4px solid #667eea;
+            padding-bottom: 15px;
         }
 
         h3 {
-            font-size: 1.5em;
-            margin-bottom: 15px;
+            color: #667eea;
+            font-size: 1.8em;
+            margin: 25px 0 15px 0;
         }
 
         p, li {
-            font-size: 1.3em;
+            font-size: 1.1em;
             line-height: 1.6;
+            color: #333;
+            margin-bottom: 12px;
+        }
+
+        ul {
+            margin-left: 40px;
+        }
+
+        li {
+            margin-bottom: 15px;
         }
 
         .highlight {
-            color: #ffd700;
+            background: linear-gradient(120deg, #ffd89b 0%, #19547b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             font-weight: bold;
+        }
+
+        .emoji {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+
+        .controls {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+            z-index: 1000;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            background: rgba(255,255,255,0.9);
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .center-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            text-align: center;
+        }
+
+        .subtitle {
+            font-size: 1.5em;
+            color: #666;
+            margin-top: 20px;
+        }
+
+        .box {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px 25px;
+            border-radius: 15px;
+            margin: 15px 0;
+            border-left: 5px solid #667eea;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 25px;
+            border-radius: 15px;
+            color: white;
+            text-align: center;
+            transition: transform 0.3s;
+            min-height: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: white;
+            font-size: 1em;
+            margin-bottom: 0;
+        }
+
+        .quote {
+            font-style: italic;
+            font-size: 1.5em;
+            color: #764ba2;
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            border-left: 5px solid #667eea;
+            background: #f5f7fa;
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 30px;
+            }
+            h1 { font-size: 2em; }
+            h2 { font-size: 1.8em; }
+            h3 { font-size: 1.4em; }
+            p, li { font-size: 1em; }
+            .grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="slide-container">
-        <!-- Slide 1: Opening -->
-        <div class="slide slide-1 active">
-            <div class="slide-1-content">
-                <div class="slide-1-left">
-                    <div class="slide-1-mascot">
-                        <img src="images/mascot.png" alt="Sunda Code Mascot">
-                    </div>
-                    <div class="slide-1-logo">
-                        <h1>SUNDA</h1>
-                        <div class="code-text">Code</div>
-                    </div>
-                </div>
-                <div class="slide-1-right">
-                    <h2>Pembelajaran Koding Kolaboratif</h2>
-                    <div class="subtitle-text">
-                        <strong>Berbasis Crowdsourcing</strong><br>
-                        Transformasi pembelajaran untuk pelestarian budaya lokal
-                    </div>
-                    <p style="font-size: 1.4em; font-style: italic; color: #ffd700;">
-                        "Student as Creator"
+    <div class="slide-counter">
+        <span id="currentSlide">1</span> / <span id="totalSlides">11</span>
+    </div>
+
+    <div class="presentation">
+        <!-- Slide 1: Cover -->
+        <div class="slide active">
+            <div class="center-content">
+                <h1>🎓 Persiapan Ekspose Praktik Baik</h1>
+                <p class="subtitle">KKG Gugus 2 Cibatok</p>
+                <p class="subtitle">SD Negeri Cardik 03</p>
+                <p class="subtitle">15 November 2025</p>
+                <div style="margin-top: 40px;">
+                    <p style="font-size: 1.8em; color: #667eea; font-weight: bold;">
+                        "Belajar Bersama, Berkarya untuk Pendidikan Bermakna"
                     </p>
-                    <div class="author">
-                        <p><strong>Rizki Mutakin, S.Pd.</strong></p>
-                        <p>SDN Cisauk - Kabupaten Bogor</p>
-                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Slide 2: Problem with Photo -->
-        <div class="slide slide-2">
-            <h1>🚨 Kondisi Awal: Dua Tantangan Besar</h1>
-            <div class="problem-grid">
-                <div class="photo-box">
-                    <h2>📚 Pembelajaran Konvensional</h2>
-                    <div class="photo-placeholder">
-                        <img src="images/foto1.jpg" alt="Siswa belajar konvensional">
-                    </div>
-                    <p style="font-size: 1.2em;">Siswa belajar bahasa Sunda secara manual - tidak menarik & kurang kontekstual</p>
-                </div>
-                <div>
-                    <h2>📊 Data Mengkhawatirkan</h2>
-                    <div class="stat-box">
-                        <div class="stat-number">50%</div>
-                        <p>Siswa JARANG pakai Bahasa Sunda di rumah</p>
-                    </div>
-                    <div class="stat-box">
-                        <div class="stat-number">75%</div>
-                        <p>Siswa anggap "Koding itu Sulit"</p>
-                    </div>
-                </div>
+        <!-- Slide 2: Pendahuluan -->
+        <div class="slide">
+            <h2>✨ Assalamu'alaikum Wr. Wb.</h2>
+            <div class="box">
+                <h3>Selamat Datang Bapak/Ibu Guru!</h3>
+                <p>Hari ini kita akan mempersiapkan sesuatu yang luar biasa - sebuah kesempatan untuk berbagi inspirasi dan inovasi dalam pembelajaran.</p>
             </div>
-            <h2 style="margin-top: 30px; text-align: center; color: #ffd700;">❓ Bagaimana menghubungkan keduanya?</h2>
-        </div>
-
-        <!-- Slide 3: Solution -->
-        <div class="slide slide-3">
-            <h1>💡 Solusi: SUNDA CODE</h1>
-            <div class="solution-points">
-                <div class="point">
-                    <div class="point-number">1</div>
-                    <div>
-                        <h3>Koding sebagai Bahasa Universal</h3>
-                        <p>Bukan sekadar menulis kode, tapi berpikir kritis dan memecahkan masalah sosial-budaya</p>
-                    </div>
-                </div>
-                <div class="point">
-                    <div class="point-number">2</div>
-                    <div>
-                        <h3>Siswa sebagai Creator</h3>
-                        <p>Dari pengguna pasif menjadi pencipta konten budaya digital</p>
-                    </div>
-                </div>
-                <div class="point">
-                    <div class="point-number">3</div>
-                    <div>
-                        <h3>Crowdsourcing Kolaboratif</h3>
-                        <p>Membangun kamus digital Sunda bersama lintas sekolah</p>
-                    </div>
-                </div>
+            <div style="margin-top: 40px;">
+                <p><span class="emoji">🎯</span> <strong>Tujuan Hari Ini:</strong></p>
+                <ul>
+                    <li>Memahami konsep dan pentingnya praktik baik</li>
+                    <li>Termotivasi untuk mendokumentasikan inovasi pembelajaran</li>
+                    <li>Siap mengekspose karya terbaik di bulan Desember</li>
+                </ul>
             </div>
         </div>
 
-        <!-- Slide 4: Implementation with Photos -->
-        <div class="slide slide-4">
-            <h1>⚙️ Implementasi: Dari Unplugged ke Digital</h1>
-            <div class="impl-grid">
-                <div class="impl-card">
-                    <h3>1️⃣ Unplugged</h3>
-                    <div class="impl-photo">
-                        <img src="images/foto2.jpg" alt="Unplugged activity">
-                    </div>
-                    <p>Belajar sequencing & logika tanpa komputer</p>
+        <!-- Slide 3: Apa itu Praktik Baik -->
+        <div class="slide">
+            <h2>💡 Apa itu Praktik Baik?</h2>
+            <div class="box">
+                <p><strong>Praktik Baik</strong> adalah strategi, metode, atau pendekatan pembelajaran yang telah terbukti <span class="highlight">efektif meningkatkan kualitas pembelajaran</span> dan memberikan dampak positif bagi siswa.</p>
+            </div>
+            <h3>Karakteristik Praktik Baik:</h3>
+            <ul>
+                <li><span class="emoji">✅</span> <strong>Inovatif</strong> - Menghadirkan cara baru yang kreatif</li>
+                <li><span class="emoji">✅</span> <strong>Efektif</strong> - Terbukti meningkatkan hasil belajar</li>
+                <li><span class="emoji">✅</span> <strong>Dapat Direplikasi</strong> - Bisa diterapkan oleh guru lain</li>
+                <li><span class="emoji">✅</span> <strong>Berdampak</strong> - Memberikan perubahan positif nyata</li>
+                <li><span class="emoji">✅</span> <strong>Berkelanjutan</strong> - Dapat dilakukan secara konsisten</li>
+            </ul>
+        </div>
+
+        <!-- Slide 4: Mengapa Praktik Baik Penting -->
+        <div class="slide">
+            <h2>🌟 Mengapa Praktik Baik Sangat Penting?</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>🎓 Untuk Siswa</h3>
+                    <p>Pembelajaran lebih menarik, bermakna, dan sesuai dengan kebutuhan abad 21</p>
                 </div>
-                <div class="impl-card">
-                    <h3>2️⃣ Plugged</h3>
-                    <div class="impl-photo">
-                        <img src="images/foto3.jpg" alt="MIT App Inventor">
-                    </div>
-                    <p>Edit aplikasi & tambah kosakata Sunda</p>
+                <div class="card">
+                    <h3>👨‍🏫 Untuk Guru</h3>
+                    <p>Meningkatkan profesionalisme dan pengakuan atas dedikasi mengajar</p>
                 </div>
-                <div class="impl-card">
-                    <h3>3️⃣ Kolaborasi</h3>
-                    <div class="impl-photo">
-                        <img src="images/foto4.jpg" alt="Kolaborasi coding">
-                    </div>
-                    <p>Siswa saling membantu memecahkan masalah</p>
+                <div class="card">
+                    <h3>🏫 Untuk Sekolah</h3>
+                    <p>Meningkatkan kualitas dan reputasi institusi pendidikan</p>
+                </div>
+                <div class="card">
+                    <h3>🌍 Untuk Pendidikan</h3>
+                    <p>Menjadi inspirasi bagi komunitas pendidik lainnya</p>
                 </div>
             </div>
         </div>
 
-        <!-- Slide 5: Showcase with Photos -->
-        <div class="slide slide-5">
-            <h1>🎨 Showcase: Aplikasi Kamus Sunda AI</h1>
-            <div class="showcase-grid">
-                <div class="showcase-box">
-                    <h2>📱 Siswa Menggunakan Aplikasi</h2>
-                    <div class="app-photo">
-                        <img src="images/foto5.jpg" alt="Siswa menggunakan aplikasi">
-                    </div>
-                    <p style="text-align: center; font-size: 1.3em;">Siswa bangga karya mereka bisa digunakan banyak orang!</p>
+        <!-- Slide 5: Fokus Praktik Baik Kita -->
+        <div class="slide">
+            <h2>🎯 Kategori Praktik Baik yang Bisa Diekspose</h2>
+            <h3><span class="emoji">🎓</span> Model & Metode Pembelajaran</h3>
+            <ul>
+                <li>Penerapan model pembelajaran inovatif (PjBL, Problem-Based Learning, dll)</li>
+                <li>Metode pengajaran yang efektif dan menyenangkan</li>
+                <li>Strategi diferensiasi pembelajaran sesuai kebutuhan siswa</li>
+            </ul>
+            <h3><span class="emoji">📱</span> Media & Sumber Belajar</h3>
+            <ul>
+                <li>Pengembangan media pembelajaran kreatif (digital maupun manual)</li>
+                <li>Pemanfaatan teknologi sederhana untuk pembelajaran</li>
+                <li>Bahan ajar interaktif yang menarik minat siswa</li>
+            </ul>
+            <h3><span class="emoji">🏫</span> Pengelolaan Kelas & Lingkungan Belajar</h3>
+            <ul>
+                <li>Penataan kelas yang mendukung pembelajaran aktif</li>
+                <li>Display karya siswa yang memotivasi</li>
+                <li>Manajemen kelas yang efektif dan kondusif</li>
+            </ul>
+        </div>
+
+        <!-- Slide 6: Contoh Praktik Baik -->
+        <div class="slide">
+            <h2>📚 Contoh Praktik Baik (Sederhana & Mudah Diterapkan)</h2>
+            <h3>Media Pembelajaran Inovatif:</h3>
+            <ul>
+                <li>Membuat video pembelajaran singkat dengan HP</li>
+                <li>Powerpoint interaktif dengan kuis dan games</li>
+                <li>Kartu bergambar digital untuk kosakata bahasa</li>
+                <li>Papan flanel interaktif untuk matematika</li>
+            </ul>
+            <h3>Project-Based Learning (PjBL):</h3>
+            <ul>
+                <li>Proyek kebun sekolah untuk pembelajaran IPA</li>
+                <li>Membuat majalah dinding kelas secara kolaboratif</li>
+                <li>Proyek wirausaha sederhana (menjual hasil karya)</li>
+                <li>Pembuatan peta lingkungan sekitar sekolah</li>
+            </ul>
+            <h3>Teknologi Sederhana:</h3>
+            <ul>
+                <li>Menggunakan Canva untuk membuat infografis</li>
+                <li>Memanfaatkan Google Forms untuk kuis interaktif</li>
+                <li>WhatsApp Group untuk diskusi dan berbagi materi</li>
+                <li>QR Code untuk akses materi pembelajaran</li>
+            </ul>
+        </div>
+
+        <!-- Slide 7: Langkah Menyusun Praktik Baik -->
+        <div class="slide">
+            <h2>📝 Langkah Menyusun Praktik Baik</h2>
+            <div style="margin-top: 30px;">
+                <div class="box">
+                    <h3>1️⃣ Identifikasi Inovasi Anda</h3>
+                    <p>Apa yang sudah Anda lakukan yang berbeda dan berhasil?</p>
                 </div>
-                <div class="showcase-box">
-                    <h2>🏆 Hall of Contributors</h2>
-                    <div class="app-photo">
-                        <img src="images/foto6.jpg" alt="Screenshot aplikasi">
-                    </div>
-                    <p style="text-align: center; font-size: 1.3em;"><span class="highlight" style="color: #000; background: rgba(255,215,0,0.3); padding: 2px 8px; border-radius: 5px;">Ratusan kata yang akan terus berkembang</span> | <span class="highlight" style="color: #000; background: rgba(255,215,0,0.3); padding: 2px 8px; border-radius: 5px;">Puluhan Kontributor</span> | <span class="highlight" style="color: #000; background: rgba(255,215,0,0.3); padding: 2px 8px; border-radius: 5px;">Antar Sekolah</span></p>
+                <div class="box">
+                    <h3>2️⃣ Dokumentasikan Prosesnya</h3>
+                    <p>Catat langkah-langkah, foto kegiatan, hasil karya siswa</p>
+                </div>
+                <div class="box">
+                    <h3>3️⃣ Analisis Dampaknya</h3>
+                    <p>Bagaimana pengaruhnya terhadap pembelajaran siswa?</p>
+                </div>
+                <div class="box">
+                    <h3>4️⃣ Susun Narasi yang Menarik</h3>
+                    <p>Ceritakan dengan storytelling yang menginspirasi</p>
                 </div>
             </div>
         </div>
 
-        <!-- Slide 6: Results -->
-        <div class="slide slide-6">
-            <h1>📊 Hasil yang Terukur</h1>
-            <div class="results-container">
-                <div class="result-item">
-                    <h3>Pemahaman Computational Thinking</h3>
-                    <div class="before">22%</div>
-                    <div class="result-arrow">↓</div>
-                    <div class="after">78%</div>
-                </div>
-                <div class="result-item">
-                    <h3>Keterlibatan Siswa</h3>
-                    <div class="before">15%</div>
-                    <div class="result-arrow">↓</div>
-                    <div class="after">88%</div>
-                </div>
-            </div>
-            <h2 style="margin-top: 50px; text-align: center; color: #ffd700;">
-                Peningkatan signifikan melalui penerapan berkelanjutan di sekolah!
-            </h2>
+        <!-- Slide 8: Struktur Dokumen -->
+        <div class="slide">
+            <h2>📄 Struktur Dokumen Praktik Baik</h2>
+            <ul>
+                <li><strong>Judul</strong> - Menarik dan deskriptif</li>
+                <li><strong>Latar Belakang</strong> - Mengapa praktik ini penting?</li>
+                <li><strong>Tujuan</strong> - Apa yang ingin dicapai?</li>
+                <li><strong>Deskripsi Praktik</strong> - Apa dan bagaimana Anda melakukannya?</li>
+                <li><strong>Pelaksanaan</strong> - Langkah-langkah detail dengan foto/video</li>
+                <li><strong>Hasil & Dampak</strong> - Data, testimoni, contoh karya siswa</li>
+                <li><strong>Refleksi</strong> - Apa yang berhasil? Apa yang perlu diperbaiki?</li>
+                <li><strong>Rekomendasi</strong> - Tips untuk guru lain yang ingin mencoba</li>
+            </ul>
         </div>
 
-        <!-- Slide 7: Impact -->
-        <div class="slide slide-7">
-            <h1>🌟 Dampak & Keberlanjutan</h1>
-            <div class="impact-grid">
-                <div class="impact-section">
-                    <h2>🏆 Dampak Nyata</h2>
-                    <h3 style="color: #ffd700; margin: 15px 0 10px 0;">👨‍🎓 Bagi Siswa</h3>
-                    <div class="impact-item">
-                        Juara 1 Aksara Sunda tingkat kecamatan (2024 & 2025)
-                    </div>
-                    <div class="impact-item">
-                        Meningkatnya kepercayaan diri & kreativitas
-                    </div>
-                    
-                    <h3 style="color: #ffd700; margin: 20px 0 10px 0;">👨‍🏫 Bagi Guru</h3>
-                    <div class="impact-item">
-                        Tumbuh budaya berbagi dan belajar di komunitas guru digital
-                    </div>
-                    <div class="impact-item">
-                        Peningkatan kompetensi digital guru dan membuka perspektif baru bahwa koding dan KA bisa menjadi sarana pelestarian budaya
-                    </div>
+        <!-- Slide 9: Tips Dokumentasi -->
+        <div class="slide">
+            <h2>📸 Tips Dokumentasi yang Efektif</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>📷 Visual</h3>
+                    <p>Ambil foto/video berkualitas saat pembelajaran berlangsung</p>
                 </div>
-                <div class="impact-section">
-                    <h2>🏫 Replikasi & Skalabilitas</h2>
-                    <div class="impact-photo">
-                        <img src="images/foto7.jpg" alt="Diseminasi">
-                    </div>
-                    <div class="impact-item">
-                        Pendampingan guru melalui aplikasi dan praktik langsung di sekolah
-                    </div>
-                    <div class="impact-item">
-                        Model scalable untuk bahasa daerah lainnya
-                    </div>
+                <div class="card">
+                    <h3>💬 Testimoni</h3>
+                    <p>Kumpulkan feedback dari siswa dan orang tua</p>
+                </div>
+                <div class="card">
+                    <h3>📊 Data</h3>
+                    <p>Sajikan data peningkatan hasil belajar</p>
+                </div>
+                <div class="card">
+                    <h3>🎨 Karya</h3>
+                    <p>Dokumentasikan hasil karya siswa sebagai bukti</p>
                 </div>
             </div>
-            <div style="margin-top: 30px; text-align: center; background: rgba(255,255,255,0.25); padding: 25px; border-radius: 15px;">
-                <h2 style="color: #ffd700;">"Siswa bertransformasi dari pengguna menjadi pencipta teknologi yang peduli pelestarian budaya"</h2>
+            <div class="box" style="margin-top: 30px;">
+                <p><strong>Ingat:</strong> Dokumentasi yang baik membuat praktik baik Anda lebih meyakinkan dan menginspirasi!</p>
             </div>
         </div>
 
-        <!-- Slide 8: Future Development -->
-        <div class="slide slide-8">
-            <div class="future-header">
-                <h1>🚀 Arah Pengembangan ke Depan</h1>
-                <p style="font-size: 1.5em; color: #ffd700;">Inovasi Berkelanjutan untuk Masa Depan</p>
+        <!-- Slide 10: Motivasi -->
+        <div class="slide">
+            <h2>🚀 Mari Kita Wujudkan Bersama!</h2>
+            <div class="quote">
+                "Setiap guru memiliki cerita inspiratif. Saatnya berbagi untuk menginspirasi lebih banyak pendidik!"
             </div>
-            
-            <div class="future-grid">
-                <div class="future-card">
-                    <div class="future-icon">🤖</div>
-                    <h3>Integrasi AI</h3>
-                    <p>Pembelajaran kosakata Sunda berbasis suara dan gambar dengan kecerdasan buatan</p>
-                </div>
-                <div class="future-card">
-                    <div class="future-icon">📊</div>
-                    <h3>Personalisasi Belajar</h3>
-                    <p>Sistem adaptif yang menyesuaikan dengan kemampuan dan kecepatan belajar siswa</p>
-                </div>
-                <div class="future-card">
-                    <div class="future-icon">🌏</div>
-                    <h3>Ekspansi Nasional</h3>
-                    <p>Replikasi untuk ratusan bahasa daerah di Indonesia</p>
-                </div>
+            <div class="box">
+                <h3>Anda Sudah Luar Biasa! 🌟</h3>
+                <p>Setiap hari Anda mengajar dengan dedikasi tinggi. Kini saatnya mendokumentasikan dan berbagi kebaikan itu kepada dunia!</p>
             </div>
-            
-            <div class="future-vision">
-                <p><strong>Visi:</strong> "Harapannya, inovasi ini dapat direplikasi untuk ratusan bahasa daerah lain di Indonesia agar semua anak bisa belajar teknologi sekaligus mencintai budayanya."</p>
-            </div>
+            <h3>Manfaat Mengekspose Praktik Baik:</h3>
+            <ul>
+                <li><span class="emoji">🏆</span> Pengakuan atas dedikasi dan inovasi Anda</li>
+                <li><span class="emoji">🤝</span> Membangun jaringan profesional yang lebih luas</li>
+                <li><span class="emoji">📈</span> Meningkatkan kompetensi profesional</li>
+                <li><span class="emoji">💡</span> Menginspirasi guru lain di seluruh Indonesia</li>
+                <li><span class="emoji">🎓</span> Kontribusi nyata untuk kemajuan pendidikan</li>
+            </ul>
         </div>
 
-        <!-- Slide 9: Closing -->
-        <div class="slide slide-9">
-            <h1>Terima Kasih</h1>
-            <p style="font-size: 1.8em; margin: 40px 0;">
-                SUNDA CODE membuktikan bahwa teknologi dan budaya <span class="highlight">bukan musuh</span>, 
-                tetapi dapat menjadi <span class="highlight">sahabat yang kuat</span> untuk transformasi pendidikan.
-            </p>
-            <div class="tagline">
-                "Koding bukan sekadar bahasa mesin,<br>
-                tetapi bahasa untuk melestarikan jiwa bangsa"
+        <!-- Slide 11: Penutup -->
+        <div class="slide">
+            <div class="center-content">
+                <h1>🎯 Agenda Hari Ini</h1>
+                <div class="box" style="text-align: left; width: 100%; max-width: 800px;">
+                    <ul>
+                        <li>✍️ Workshop penyusunan praktik baik</li>
+                        <li>📸 Pendampingan dokumentasi praktik baik</li>
+                        <li>🔍 Review & finalisasi karya</li>
+                        <li>📋 Informasi teknis ekspose Desember</li>
+                    </ul>
+                </div>
+                <div class="quote">
+                    "Bersama kita buat pendidikan yang lebih bermakna!"
+                </div>
+                <h2 style="margin-top: 40px;">🙏 Wassalamu'alaikum Wr. Wb.</h2>
+                <p style="margin-top: 20px; font-size: 1.2em; color: #666;">
+                    Mari kita mulai perjalanan inspiratif ini!
+                </p>
             </div>
-            <p style="margin-top: 50px; font-size: 1.5em;">
-                <strong>Rizki Mutakin, S.Pd.</strong><br>
-                SDN Cisauk - Kabupaten Bogor
-            </p>
         </div>
     </div>
 
-    <!-- Navigation -->
-    <div class="slide-number">Slide <span id="current">1</span> / 9</div>
+    <div class="controls">
+        <button id="prevBtn" onclick="changeSlide(-1)">◀ Sebelumnya</button>
+        <button id="nextBtn" onclick="changeSlide(1)">Selanjutnya ▶</button>
+    </div>
 
     <script>
-        let currentSlide = 1;
-        const totalSlides = 9;
-        let hideTimeout;
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        document.getElementById('totalSlides').textContent = totalSlides;
 
         function showSlide(n) {
-            const slides = document.querySelectorAll('.slide');
-            if (n > totalSlides) currentSlide = totalSlides;
-            if (n < 1) currentSlide = 1;
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
             
-            slides.forEach(slide => slide.classList.remove('active'));
-            slides[currentSlide - 1].classList.add('active');
-            document.getElementById('current').textContent = currentSlide;
+            document.getElementById('currentSlide').textContent = currentSlide + 1;
             
-            showSlideNumber();
+            document.getElementById('prevBtn').disabled = currentSlide === 0;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
         }
 
-        function nextSlide() {
-            currentSlide++;
-            if (currentSlide > totalSlides) currentSlide = totalSlides;
-            showSlide(currentSlide);
+        function changeSlide(direction) {
+            showSlide(currentSlide + direction);
         }
 
-        function prevSlide() {
-            currentSlide--;
-            if (currentSlide < 1) currentSlide = 1;
-            showSlide(currentSlide);
-        }
-
-        function showSlideNumber() {
-            const slideNumber = document.querySelector('.slide-number');
-            slideNumber.classList.remove('hidden');
-            
-            clearTimeout(hideTimeout);
-            hideTimeout = setTimeout(() => {
-                slideNumber.classList.add('hidden');
-            }, 3000);
-        }
-
+        // Keyboard navigation
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowRight' || e.key === ' ') {
-                e.preventDefault();
-                nextSlide();
-            }
-            if (e.key === 'ArrowLeft') {
-                e.preventDefault();
-                prevSlide();
-            }
-            if (e.key === 'f' || e.key === 'F') {
-                if (!document.fullscreenElement) {
-                    document.documentElement.requestFullscreen();
-                } else {
-                    document.exitFullscreen();
-                }
-            }
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
         });
 
-        document.addEventListener('mousemove', showSlideNumber);
-
-        showSlide(1);
-        showSlideNumber();
+        // Initialize
+        showSlide(0);
     </script>
 </body>
 </html>
